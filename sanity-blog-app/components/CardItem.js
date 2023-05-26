@@ -2,7 +2,7 @@ import React from "react";
 
 import { Card } from "react-bootstrap";
 
-export const CardItem = () => {
+export const CardItem = ({ title, subtitle }) => {
   return (
     <Card className={`fj-card`}>
       <div className="card-body-wrapper">
@@ -28,8 +28,8 @@ export const CardItem = () => {
           />
         </div>
         <Card.Body>
-          <Card.Title className="card-main-title">Placeholder Title</Card.Title>
-          <Card.Text>Placehodler Subtitle</Card.Text>
+          <Card.Title className="card-main-title">{title}</Card.Title>
+          <Card.Text>{subtitle}</Card.Text>
         </Card.Body>
       </div>
       <a className="card-button">Read More</a>
