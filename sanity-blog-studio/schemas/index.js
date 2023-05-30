@@ -7,14 +7,14 @@ export const schemaTypes = [
       {
         name: 'name',
         title: 'Name',
-        type: 'string'
+        type: 'string',
       },
       {
         name: 'avatar',
         title: 'Avatar',
-        type: 'image'
-      }
-    ]
+        type: 'image',
+      },
+    ],
   },
   {
     name: 'blog',
@@ -40,17 +40,26 @@ export const schemaTypes = [
         name: 'date',
         type: 'datetime',
         title: 'Date',
+        validation: (Rule) => {
+          return Rule.required()
+        },
       },
       {
         name: 'author',
         title: 'Author',
         type: 'reference',
-        to: [{type: 'author'}]
+        to: [{type: 'author'}],
+        validation: (Rule) => {
+          return Rule.required()
+        },
       },
       {
         name: 'slug',
         type: 'slug',
         title: 'Slug',
+        validation: (Rule) => {
+          return Rule.required()
+        },
       },
     ],
   },
