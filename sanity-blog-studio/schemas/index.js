@@ -1,5 +1,22 @@
 export const schemaTypes = [
   {
+    name: 'author',
+    type: 'document',
+    title: 'Author',
+    fields: [
+      {
+        name: 'name',
+        title: 'Name',
+        type: 'string'
+      },
+      {
+        name: 'avatar',
+        title: 'Avatar',
+        type: 'image'
+      }
+    ]
+  },
+  {
     name: 'blog',
     type: 'document',
     title: 'Blog',
@@ -23,6 +40,12 @@ export const schemaTypes = [
         name: 'date',
         type: 'datetime',
         title: 'Date',
+      },
+      {
+        name: 'author',
+        title: 'Author',
+        type: 'reference',
+        to: [{type: 'author'}]
       },
       {
         name: 'slug',

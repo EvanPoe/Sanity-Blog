@@ -13,14 +13,13 @@ export const AuthorInfo = () => {
             width={64}
             height={64}
             className="mr-3"
-            src="https://avatars1.githubusercontent.com/u/9482724?s=460&u=69a6acab13fd5547a4e316e496b573271077147f&v=4"
+            src="https://cdn.sanity.io/images/iif2n9aa/production/c51ca43d4da3be715ba1e79a5d105157ceb787e9-770x828.png"
             alt="Generic placeholder"
           />
           <Media.Body>
-            <h5 className="font-weight-bold mb-0">Hello Friends,</h5>
+            <h5 className="font-weight-bold mb-0">Hello Butt-Pirates,</h5>
             <p className="welcome-text">
-              My name is Evan Poe and I am an experienced web and CMS developer.
-              This is my blog page.
+              I'm working through another Udemy course. Stick around and ya might learn ya something you bunch of donught hole punchers.
             </p>
           </Media.Body>
         </Media>
