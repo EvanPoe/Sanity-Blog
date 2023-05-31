@@ -1,8 +1,9 @@
 import React from "react";
 
 import { Card } from "react-bootstrap";
+import Link from "next/link";
 
-export const CardItem = ({ author, title, subtitle, date, image }) => {
+export const CardItem = ({ author, title, subtitle, date, image, link }) => {
   return (
     <Card className={`fj-card`}>
       <div className="card-body-wrapper">
@@ -22,17 +23,18 @@ export const CardItem = ({ author, title, subtitle, date, image }) => {
           </div>
         </Card.Header>
         <div className="view overlay">
-          <Card.Img
-            src={image}
-            alt="Card image cap"
-          />
+          <Card.Img src={image} alt="Card image cap" />
         </div>
         <Card.Body>
           <Card.Title className="card-main-title">{title}</Card.Title>
           <Card.Text>{subtitle}</Card.Text>
         </Card.Body>
       </div>
-      <a className="card-button">Read More</a>
+      {link && (
+        <Link {...link} className="card-button">
+          Read More
+        </Link>
+      )}
     </Card>
   );
 };
